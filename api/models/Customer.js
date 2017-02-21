@@ -20,6 +20,26 @@ module.exports = {
 
     state: {
       type: 'string'
+    },
+
+    street: {
+      type: 'string'
+    },
+
+    city: {
+      type: 'string'
+    },
+
+    zip: {
+      type: 'integer'
+    },
+
+    homephone: {
+      type: 'integer'
+    },
+
+    cellphone: {
+      type: 'integer'
     }
   }
 };
