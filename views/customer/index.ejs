@@ -4,6 +4,12 @@
     <th>ID</th>
     <th>Name</th>
     <th>Email</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Home Phone</th>
+    <th>Cell Phone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +19,16 @@
     <td><%= customer.id %></td>
     <td><%= customer.name %></td>
     <td><%= customer.email %></td>
+    <td><%= customer.street %></td>
+    <td><%= customer.city %></td>
+    <td><%= customer.state %></td>
+    <td><%= customer.zip %></td>
+    <td><%= customer.homephone %></td>
+    <td><%= customer.cellphone %></td>
 
-    <td><a href="/customer/show <%= customer.id%>">Show</a></td>
-    <td><a href="/customer/edit <%= customer.id%>">Edit</a></td>
-    <td><a href="/customer/destroy <%= customer.id%>">Delete</a></td>
+    <td><a href="/customer/show/ <%= customer.id %>">Show</a></td>
+    <td><a href="/customer/edit/ <%= customer.id %>">Edit</a></td>
+    <td><a href="/customer/destroy/ <%= customer.id %>">Delete</a></td>
   </tr>
   <% }) %>
 </table>
