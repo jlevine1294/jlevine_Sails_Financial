@@ -4,3 +4,8 @@
 <h4><%= customer.state %></h4>
 <h5><%= customer.city%></h5>
 <h6><%= customer.street%></h6>
+
+<form action="/stock/new/" method="POST" >
+  <input type="hidden" value="<%= customer.id %>" name="owner" >
+  <input type="submit" value="Add Stock" />
+</form>

@@ -40,7 +40,13 @@ module.exports = {
 
     cellphone: {
       type: 'integer'
+    },
+
+    stocks: {
+      collection: 'stock',
+      via: 'owner'
     }
+
   }
 };
 
