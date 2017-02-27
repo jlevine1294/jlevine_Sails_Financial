@@ -13,9 +13,22 @@ module.exports = {
       required: true
     },
 
+    name: {
+      type: 'string'
+    },
+
+
     number_of_shares: {
       type: 'float',
       required: true
+    },
+
+    purchase_price: {
+      type: 'float'
+    },
+
+    date: {
+      type: 'string'
     },
 
     owner: {

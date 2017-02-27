@@ -31,15 +31,15 @@ module.exports = {
     },
 
     zip: {
-      type: 'integer'
+      type: 'string'
     },
 
     homephone: {
-      type: 'integer'
+      type: 'string'
     },
 
     cellphone: {
-      type: 'integer'
+      type: 'string'
     },
 
     stocks: {
