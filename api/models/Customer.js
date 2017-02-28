@@ -31,7 +31,7 @@ module.exports = {
     },
 
     zip: {
-      type: 'string'
+      type: 'integer'
     },
 
     homephone: {
