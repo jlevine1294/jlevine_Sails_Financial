@@ -9,8 +9,10 @@
 <table>
   <tr>
     <th>Symbol</th>
+    <th>Name</th>
     <th>Number of Shares</th>
-    <th>Current Price</th>
+    <th>Purchase Price</th>
+    <th>Date</th>
 
     <th></th>
     <th></th>
@@ -19,7 +21,10 @@
   <% _.each(customer.stocks, function(stock) { %>
   <tr data-id="<%= stock.id %>" data-model="stock" >
     <td><%= stock.symbol %></td>
+    <td><%= stock.name %></td>
     <td><%= stock.number_of_shares %></td>
+    <td><%= stock.purchase_price %></td>
+    <td><%= stock.date %></td>
     <td></td>
     <td><a href="/stock/show/ <%= stock.id%>">Show</a></td>
     <td><a href="/stock/edit/ <%= stock.id%>">Edit</a></td>
