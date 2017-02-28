@@ -23,6 +23,33 @@ module.exports = {
 
       res.redirect('/customer/show/' + stock.owner);
     });
+  },
+
+  edit: function(req, res, next) {
+    Stock.findOne(req.param('id'), function foundStock(err, stock) {
+      if (err) return next(err);
+      if (!stock) return next();
+
+      res.view ({
+        stock: stock
+      });
+    });
+  },
+
+  update: function(req, res, next) {
+    Stock.update(req.param('id'), req.params.all(), function stockUpdated(err){
+      if (err) {
+        return res.redirect('/stock/edit/' + req.param('id'));
+      }
+
+      res.redirect('/customer/show/' + stock.owner);
+    });
+  },
+
+  destroy: function(req, res, next) {
+    Stock.destroy(req.param('id')).exec( function() {
+      res.redirect('/customer/show/' + stock.owner);
+    });
   }
 
 
