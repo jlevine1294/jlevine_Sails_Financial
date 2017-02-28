@@ -9,6 +9,29 @@ module.exports = {
 
   attributes: {
 
+    category: {
+      type: 'string'
+    },
+
+    description: {
+      type: 'string'
+    },
+
+    aquired_value: {
+      type: 'float'
+    },
+
+    aquired_date: {
+      type: 'string'
+    },
+
+    recent_value: {
+      type: 'float'
+    },
+
+    recent_date: {
+      type: 'string'
+    }
   }
 };
 
