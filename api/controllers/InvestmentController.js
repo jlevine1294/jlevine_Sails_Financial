@@ -6,6 +6,25 @@
  */
 
 module.exports = {
-	
+
+  'new': function(req, res, err) {
+    Customer.findOne(req.param('boss'), function foundCustomer (err, customer) {
+      if (err) return next(err);
+      if (!customer) return next();
+      res.view({
+        customer: customer
+      });
+    });
+  },
+
+  create: function(req, res, next) {
+    Investment.create(req.params.all(), function investmentCreated(err, investment) {
+      if (err) return next(err);
+
+      res.redirect('/customer/show/' + investment.boss);
+    });
+  },
+
+
 };
 
