@@ -31,6 +31,11 @@ module.exports = {
 
     recent_date: {
       type: 'string'
+    },
+
+    boss: {
+      model: 'customer',
+      required: true
     }
   }
 };
