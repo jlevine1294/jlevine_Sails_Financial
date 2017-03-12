@@ -25,6 +25,32 @@ module.exports = {
     });
   },
 
+  edit: function(req, res, next) {
+    Investment.findOne(req.param('id'), function foundInvestment(err, investment) {
+      if (err) return next(err);
+      if (!investment) return next();
+
+      res.view ({
+        investment: investment
+      });
+    });
+  },
+
+  update: function(req, res, next) {
+    Investment.update(req.param('id'), req.params.all(), function investmentUpdated(err){
+      if (err) {
+        return res.redirect('/investment/edit/' + req.param('id'));
+      }
+
+      res.redirect('/customer/show/' + investment.boss);
+    });
+  },
+
+  destroy: function(req, res, next) {
+    Investment.destroy(req.param('id')).exec( function() {
+      res.redirect('/customer/show/' + investment.boss);
+    });
+  }
 
 };
 

@@ -1,0 +1,12 @@
+<form action="/investment/update/<%= investment.id %>" method="POST" >
+  <h2>Update Investments</h2>
+
+  <input value="<%= investment.category %>" type="text" name="category" ><br />
+  <input value="<%= investment.description %>" type="text" name="discription" ><br />
+  <input value="<%= investment.aquired_value %>" type="text" name="aquired value"  />
+  <input value="<%= investment.aquired_date %>" type="text" name="aquired date" />
+  <input value="<%= investment.recent_value %>" type="text" name="recent value" />
+  <input value="<%= investment.recent_date %>" type="text" name="recent date" />
+
+  <input type="submit" value="Edit Stock" />
+</form>
