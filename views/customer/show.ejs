@@ -18,6 +18,7 @@
     <th>Number of Shares</th>
     <th>Purchase Price</th>
     <th>Date</th>
+    <th>Current Price</th>
 
     <th></th>
     <th></th>
@@ -30,6 +31,7 @@
     <td><%= stock.number_of_shares %></td>
     <td><%= stock.purchase_price %></td>
     <td><%= stock.date %></td>
+    <td><%= stock.current_price %></td>
     <td></td>
     <td><a href="/stock/show/ <%= stock.id%>">Show</a></td>
     <td><a href="/stock/edit/ <%= stock.id%>">Edit</a></td>
