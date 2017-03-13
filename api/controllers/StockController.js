@@ -25,6 +25,17 @@ module.exports = {
     });
   },
 
+  show: function (req, res, next) {
+    Stock.findOne(req.param('id')).populateAll().exec(function (err, stock) {
+      if (err) return next(err);
+      if (!stock) return next();
+
+      res.view({
+        stock: stock
+      });
+    });
+  },
+
   edit: function(req, res, next) {
     Stock.findOne(req.param('id'), function foundStock(err, stock) {
       if (err) return next(err);
@@ -42,13 +53,13 @@ module.exports = {
         return res.redirect('/stock/edit/' + req.param('id'));
       }
 
-      res.redirect('/customer/show/' + stock.owner);
+      res.redirect('/customer/');
     });
   },
 
   destroy: function(req, res, next) {
     Stock.destroy(req.param('id')).exec( function() {
-      res.redirect('/customer/show/' + stock.owner);
+      res.redirect('/customer/');
     });
   }
 
