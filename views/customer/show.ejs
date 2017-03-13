@@ -29,9 +29,9 @@
     <td><%= stock.symbol %></td>
     <td><%= stock.name %></td>
     <td><%= stock.number_of_shares %></td>
-    <td><%= stock.purchase_price %></td>
+    <td>$<%= stock.purchase_price %></td>
     <td><%= stock.date %></td>
-    <td><%= stock.current_price %></td>
+    <td>$<%= stock.current_price %></td>
     <td></td>
     <td><a href="/stock/show/ <%= stock.id%>">Show</a></td>
     <td><a href="/stock/edit/ <%= stock.id%>">Edit</a></td>
@@ -65,9 +65,9 @@
   <tr data-id="<%= investment.id %>" data-model="investment" >
     <td><%= investment.category %></td>
     <td><%= investment.description %></td>
-    <td><%= investment.aquired_value %></td>
+    <td>$<%= investment.aquired_value %></td>
     <td><%= investment.aquired_date %></td>
-    <td><%= investment.recent_value %></td>
+    <td>$<%= investment.recent_value %></td>
     <td><%= investment.recent_date %></td>
     <td><a href="/investment/show/ <%= investment.id%>">Show</a></td>
     <td><a href="/investment/edit/ <%= investment.id%>">Edit</a></td>
