@@ -53,7 +53,6 @@ module.exports = {
         return res.redirect('/investment/edit/' + req.param('id'));
       }
 
-      res.redirect('/customer/');
     });
   },
 

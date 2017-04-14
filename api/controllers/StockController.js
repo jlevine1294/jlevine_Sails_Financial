@@ -48,12 +48,12 @@ module.exports = {
   },
 
   update: function(req, res, next) {
-    Stock.update(req.param('id'), req.params.all(), function stockUpdated(err){
+    Stock.update(req.param('id'), req.params.all(), function customerUpdated(err){
       if (err) {
         return res.redirect('/stock/edit/' + req.param('id'));
       }
 
-      res.redirect('/customer/');
+      res.redirect('/customer/show/' + req.param('owner'));
     });
   },
 
