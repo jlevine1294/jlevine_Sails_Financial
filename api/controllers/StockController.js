@@ -53,7 +53,9 @@ module.exports = {
         return res.redirect('/stock/edit/' + req.param('id'));
       }
 
-      res.redirect('/customer/show/' + req.param('owner'));
+
+      res.redirect('/customer/');
+
     });
   },
 

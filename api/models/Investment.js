@@ -33,8 +33,8 @@ module.exports = {
       type: 'string'
     },
 
-    owner: {
-      model: 'customer',
+    boss: {
+      model: 'owner',
       required: true
     }
   }
